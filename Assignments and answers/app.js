@@ -1,12 +1,21 @@
 import React from "react";
 import  ReactDOM  from "react-dom/client";
 
-const heading = document.createElement('h4');
-heading.innerHTML = "This heading is created using JavaScript";
+// React Element using JSX
+const jsxHeading = <h1 id="heading" className="heading">Namaste React!</h1>;
 
-const root = document.getElementById('root_js');
-root.appendChild(heading);
+// React functional component
+const HeadingComponent = () => {
+   return <h1 className="heading">This is functional component</h1>;
+}
 
-const react_heading = React.createElement("div",{id: "react_container"},React.createElement("h4",{id: "react_h4"},"This heading is created using React"));
-const react_root=ReactDOM.createRoot(document.getElementById('root_react'));
-react_root.render(react_heading);
+const InnerContainer = () => (
+   <div>
+        <HeadingComponent />
+        <p>Namsate React</p>
+   </div> 
+)
+
+const react_root = ReactDOM.createRoot(document.getElementById("root_react"));
+
+react_root.render(<InnerContainer />);
