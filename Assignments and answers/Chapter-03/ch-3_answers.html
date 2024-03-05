@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Namaste React CHapter-3 Answers</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="yes"/>
+        <meta name="author" content="Amol Patil"/>
+        <meta name="description" content="Answers of chapter 1 questions from namaste React course"/>
+        <meta name="keywords" content="Namaste React, React JS, Answers" />
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1 class="title">Answers of Chapter 3</h1>
+                <p class="question">What is JSX and It's Superpowers?</p>
+                <p class="answer">JSX is a syntax extention for Javscript that let you write <strong>HTML-like</strong> syntax inside JavaScript file. For many years, web developers kept content in HTML, design in CSS, and logic in JavaScript—often in separate files! But as the Web became more interactive, logic increasingly determined content. JavaScript was in charge of the HTML! This is why in React, rendering logic and markup live together in the same place — components. Each React component is a JavaScript function that may contain some markup that React renders into the browser. React components use a syntax extension called JSX to represent that markup. JSX looks a lot like HTML, but it is a bit stricter and can display dynamic information.</p>
+                <p>Convert Below HTML Markup in JSX Markup</p>
+                <code> HTML Markup:
+                    <pre>
+                        &lt;h1&gt;Hedy Lamarr's Todos&lt;/h1&gt;
+                        &lt;img   src="https://i.imgur.com/yXOvdOSs.jpg" alt="Hedy Lamarr" class="photo"&gt; 
+                        &lt;ul&gt;
+                            &lt;li&gt;Invent new traffic lights
+                            &lt;li&gt;Rehearse a movie scene
+                            &lt;li&gt;Improve the spectrum technology
+                        &lt;/ul&gt;
+                    </pre>
+                </code>
+                <br/>
+                <code> JSX Markup:
+                    <pre>
+                        export default function ToDOList(){
+                            return (
+                                &lt;&gt;
+                                    &lt;h1&gt;Hedy Lamarr's Todos&lt;/h1&gt;
+                                    &lt;img   src="https://i.imgur.com/yXOvdOSs.jpg" alt="Hedy Lamarr" className="photo"&gt; 
+                                    &lt;ul&gt;
+                                        &lt;li&gt;Invent new traffic lights
+                                        &lt;li&gt;Rehearse a movie scene
+                                        &lt;li&gt;Improve the spectrum technology
+                                    &lt;/ul&gt;
+                                &lt;/&gt;
+                            )
+                        }
+                        
+                    </pre>
+                </code>
+                <p><strong>The Rules of JSX</strong></p>
+                <ol>
+                    <li><strong>Return a single root element</strong>: To return multiple elements from a component, wrap them with a single parent tag. If you don’t want to add an extra <code>&lt;div&gt;</code> to your markup, you can write <code></code>&lt;&gt; and &lt;/&gt;</code> instead. This empty tag is called a <strong>Fragments</strong> let you group things without leaving any trace in the browser HTML tree.</li>
+                    <li><strong>Close all the tags</strong>: JSX requires tags to be explicitly closed: self-closing tags like <code>&lt;img&gt;</code> must become <code>&lt;img /&gt;</code>, and wrapping tags like <code>&lt;li&gt;oranges</code> must be written as <code>&lt;li&gt;oranges&lt;/li&gt;</code>.</li>
+                    <li><strong>camelCase all most of the things! </strong>: JSX turns into JavaScript and attributes written in JSX become keys of JavaScript objects. In your own components, you will often want to read those attributes into variables. But JavaScript has limitations on variable names. For example, their names can’t contain dashes or be reserved words like class. This is why, in React, many HTML and SVG attributes are written in camelCase. For example, instead of <code>stroke-width</code> you use <code>strokeWidth</code>. Since <code>class</code> is a reserved word, in React you write <code>instead</code>, named after the corresponding DOM property.</li>
+                    <li><strong>JSX is an expression too</strong>: We can write javascript sxpression in JSX markeup.<br/> e.g. 
+                    <code>const value = 100; &lt;h1&gt;{value}&lt;/h1&gt;</code></li>
+                    <li><strong>JSX prevents injection attacks</strong>: JSX escaps data if the data is maliciuos.</li>
+                </ol>
+                <p class="question">Role of <code>type</code> attribute in <code>script</code> tag? What options can I use there?</p>
+                <p class="answer">The <code>type</code> attribute indicates the type of script represented. The deafult value of <code>type</code> atrribute in <code>script</code> tag is <code>text/javascript</code>. Below are the various values of type attribute.</p>
+                <ol>
+                    <li><strong>type="text/javascript"</strong>: This is deafult value and it indicates the file is javascript file</li>
+                    <li><strong>type="module"</strong>: it indicates the file is javascript module.</li>
+                    <li><strong>type="importmap"</strong>: This value indicates that the body of the element contains an import map. The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing JavaScript modules.</li>
+                </ol>
+                <p class="question"><code>{TitleComponent}</code> vs <code>&lt;TitleComponent/&gt;</code> vs <code>&lt;TitleComponent&gt;&lt;TitleComponent/&gt;</code> ?</p>
+                <ol class="answer">
+                    <li><strong>{TitleComponent}</strong>: This is used to write JavaScript expression or fetch JavaScript variables in the JSX markup.</li>
+                    <li><strong>&lt;TitleComponent/&gt;</strong>: This is used to render self-closing React component.</li>
+                    <li><strong>&lt;TitleComponent&gt;&lt;TitleComponent/&gt;</strong>: This is used to render React component with opening and closing tag.</li>
+                </ol>
+            </section>               
+        </main>
+        <script defer src="ch-1_answers.js" ></script>
+      </body>
+</html>

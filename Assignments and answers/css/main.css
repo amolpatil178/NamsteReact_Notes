@@ -1,68 +1,77 @@
-@font-face{
-    font-family: Roboto;
-    src: url(../assets/Fonts/Roboto-Regular.ttf);
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/Fonts/Roboto-Regular.ttf);
 }
-body{
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: icomoon;
+  src: url(../assets/Fonts/icomoon.ttf);
+}
+body {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-main{
-    font-family: Roboto;
+main {
+  font-family: Roboto;
 }
-section{
-    max-width: 1024px;
-    margin: 0 auto;
-    text-align: justify;
-    margin-bottom: 20px;
+section {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: justify;
+  margin-bottom: 20px;
 }
-h1, p{
-    margin: 0;
+h1,
+p {
+  margin: 0;
 }
-.title{
-    font-size: 30px;
-    line-height: 34px;
-    text-align: center;
-    margin: 20px 0px;
-    color: #870B7B;
+.title {
+  font-size: 30px;
+  line-height: 34px;
+  text-align: center;
+  margin: 20px 0px;
+  color: #870b7b;
 }
-.question{
-    font-size: 20px;
-    line-height: 34px;
-    color: #C4226E;
-    margin-bottom: 5px;
+.question {
+  font-size: 20px;
+  line-height: 34px;
+  color: #c4226e;
+  margin-bottom: 5px;
 }
-.answer{
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 20px;    
+.answer {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
 }
-.answer a{
-    color: #870B7B;
+.answer a {
+  color: #870b7b;
 }
 table {
-    max-width: 820px;
-    margin: 0 auto;
-    border-collapse: collapse;
+  max-width: 820px;
+  margin: 0 auto;
+  border-collapse: collapse;
 }
-td, th {
-    border: 1px solid black;
-    padding: 8px;
+td,
+th {
+  border: 1px solid black;
+  padding: 8px;
 }
-td{
-    text-align: left;
+td {
+  text-align: left;
 }
-th{
-    text-align: center;
+th {
+  text-align: center;
 }
-tr td:first-child{
-    font-weight: bold;
+tr td:first-child {
+  font-weight: bold;
 }
 
-section code{
-    padding: 5px 5px;
-    background-color: rgba(187,239,253,0.3);
-    border-radius: 10px;
+section code {
+  padding: 5px 5px;
+  background-color: rgba(187, 239, 253, 0.3);
+  border-radius: 10px;
+}
+ol li {
+  margin-bottom: 10px;
 }
